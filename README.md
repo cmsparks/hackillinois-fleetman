@@ -1,10 +1,7 @@
 # fleetman
 
-To run:
+The data files should be put into the db\_setup folder.
 
-```
-export FLASK_APP=fleetman_server
-export FLASK_ENV=development
-pip install -e .
-flask run
-```
+To setup: `./setup.sh`
+
+To run: `./run.sh`
