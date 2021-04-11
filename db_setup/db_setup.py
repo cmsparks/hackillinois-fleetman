@@ -1,4 +1,5 @@
 import sqlite3
+import mysql.connector
 import csv
 
 class csvrd(object):
@@ -18,18 +19,19 @@ class csvrd(object):
                 PRIMARY KEY (AssetId, Date)
         )""")
 
-        conn.commit()
-        conn.close()
-
     def readFile(self, filename):
         conn = sqlite3.connect('fleet_data.db')
         cur = conn.cursor() 
         filename.encode('utf-8')
+        i = 0
         with open(filename) as f:
             reader = csv.reader(f)
             next(reader)
             for field in reader:
-                cur.execute("INSERT INTO FleetStatistics VALUES (?,?,?,?,?,?,?,?);", field)
+                i += 1
+                if(i % 10000 == 0):
+                    print(i)
+                cur.execute("INSERT INTO FleetStatistics VALUES (%s,%s,%s,%s,%s,%s,%s,%s);", field)
 
         conn.commit()
         conn.close()
