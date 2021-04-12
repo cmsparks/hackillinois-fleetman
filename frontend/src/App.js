@@ -29,12 +29,12 @@ class App extends React.Component {
         <div className="ViewSelector">
           <button 
             style={{
-              color: this.state.visibility === 'alerts' ? 'blue' : 'black'
+              color: this.state.visibility === 'alerts' ? 'rgb(255,99,132)' : 'black'
             }}
           onClick={() => this.handleButton("alerts")}>Assets View</button>
           <button 
             style={{
-              color: this.state.visibility === 'asset' ? 'blue' : 'black'
+              color: this.state.visibility === 'asset' ? 'rgb(255,99,132)' : 'black'
             }}
           onClick={() => this.handleButton("asset")}>Day View</button>
         </div>

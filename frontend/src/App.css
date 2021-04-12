@@ -2,15 +2,19 @@ html, body {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
+  font-family: 'Avenir', Helvetica, sans-serif;
 }
 
 .TitleBar {
+  font-size: 15pt;
   height: 5vh;
   text-align: center;
   width: 100%;
+  text-color: rgb(255,99,132);
 }
 
 .ViewSelector {
+  font-size: 16pt;
   height: 8vh;
   z-index: 1;
   width: 100%;
@@ -27,8 +31,9 @@ html, body {
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  color: blue;
-  margin: 2vh 10px;
+  color: rgb(255,99,132);
+  margin: 0 10px;
+  margin-bottom: 50px;
   font-weight: 800;
   border-radius: 5px;
 }
@@ -47,7 +52,7 @@ html, body {
 
 .InputHeader {
   grid-area: input;
-  margin: 0 auto;
+  margin: 25px auto;
 }
 
 .MapView {
@@ -58,11 +63,12 @@ html, body {
 }
 
 .SidebarList {
+  overflow-x: hidden;
   grid-area: sidebar;
   overflow: scroll;
   margin: 20px;
   border-radius: 5px;
-  border: 1px solid grey;
+  border: 1px solid black;
   padding: 0;
 }
 
@@ -87,7 +93,7 @@ html, body {
   cursor: pointer;
   outline: inherit;
   text-align: right;
-  color: blue;
+  color: rgb(255,99,132);
   
   margin: 0 20px;
 }
@@ -95,6 +101,12 @@ html, body {
 
 .AssetDetail {
   grid-area: content;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding: 0 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
 }
